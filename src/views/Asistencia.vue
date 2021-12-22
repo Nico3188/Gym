@@ -12,6 +12,7 @@
 <script>
 import Search from "../components/Search";
 import Cardalum from "@/components/Cardalum";
+import Axios from "axios"
 //  
 //:name="Alumno.name" :DNI="Alumno.id" :phone="Alumno.phone" :street="Alumno.address.street" :city="Alumno.address.city"  
 export default {
@@ -29,12 +30,15 @@ export default {
     },
 
   methods: {
-      async getAlumnos(buscar){
+      getAlumnos(buscar){
           //Consulta a servidor para obtener los Alumnos
-            const resp= await this.axios.get('https://jsonplaceholder.typicode.com/users/1');
-            const { data } =resp;
-            this.Alumnos=data;
-            console.log(this.Alumnos)
+          Axios.get('https://jsonplaceholder.typicode.com/users/1')
+          .then(result => {
+              this.Alumnos.push(result.data)
+          })
+          .catch(err => {
+              alert('Error');
+          });
       },
   },
 }
