@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <h5 class="text-center"> - El que chori el codigo a SU MAMÀ - </h5>
+        <h5 class="text-center"> - Nicolas Soria - </h5>
     </footer>
 </template>
 <script>

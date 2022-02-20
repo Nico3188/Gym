@@ -8,6 +8,30 @@ const routes = [
     component: Home
   },
   {
+    path: '/RegistroUser',
+    name: 'RegistroUser',
+    // route level code-splitting
+    // this generates a separate chunk (RegistroUser.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "RegistroUser" */ '../views/RegistroUser.vue')
+  },
+  {
+    path: '/Alumno',
+    name: 'Alumno',
+    // route level code-splitting
+    // this generates a separate chunk (Alumno.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "Alumno" */ '../views/Alumno.vue')
+  },
+  {
+    path: '/LogIn',
+    name: 'Login',
+    // route level code-splitting
+    // this generates a separate chunk (LogIn.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "LogIn" */ '../views/LogIn.vue')
+  },
+  {
     path: '/Pagos',
     name: 'Pagos',
     // route level code-splitting
@@ -22,8 +46,6 @@ const routes = [
     // this generates a separate chunk (Asistencia.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component:()=> import(/* webpackChunkName: "Asistencia" */'../views/Asistencia.vue')
-
-    
 }
 ]
 
