@@ -8,17 +8,19 @@
             aria-describedby="emailHelp" 
             v-model="buscar">
     </div>
-    <button type="submit" class="btn btn-primary">Buscar</button>
+        <button type="submit" class="btn btn-primary m-2">Buscar</button>
     </form>
 </template>
 <script>
 export default {
-    data:()=>({
-        buscar:"",
-    }),
+    props:{
+        buscar:""
+    },
     methods: {
         activarSearch(){
+            
             this.$emit("accion",this.buscar);
+
             //console.log(this.buscar);
         }
     },
